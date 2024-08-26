@@ -8,7 +8,7 @@ FROM node:16-alpine
 RUN mkdir -p /usr/app
 WORKDIR /usr/app
 COPY . .
-RUN npm config set registry https://registry.npm.taobao.org
+RUN npm config set registry https://registry.npmmirror.com
 RUN npm install
 RUN npm run build
 ENV PORT 3000
